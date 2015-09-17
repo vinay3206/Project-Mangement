@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Project-management
 
 This README outlines the details of collaborating on this Ember application.
@@ -51,3 +52,7 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+=======
+# Project-Mangement
+this is a project management tool
+>>>>>>> 566c0660ad4b143a57cd61c01c50f4a784d09480

@@ -1,3 +1,24 @@
-<h2 id="title">Welcome to Ember.js</h2>
-
-{{outlet}}
+<nav class="navbar navbar-default navbar-fixed-top">
+      
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project Management</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            {{#link-to 'projects' tag="li"}}<a href="#">Home</a>{{/link-to}}
+            {{#link-to 'dashboard' tag="li"}}<a href="#">dashboard</a>{{/link-to}}
+            {{#link-to 'add' tag="li" class="pull-right"}}<a href="#">Add new Project</a>{{/link-to}}
+          </ul>
+        </div><!--/.nav-collapse -->
+    </nav>
+<div class="container">
+	<div class="row">
+		{{outlet}}
+	</div>
+</div>

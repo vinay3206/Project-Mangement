@@ -1,0 +1,23 @@
+ <div class="col-md-8">
+ <form>
+        <div class="form-group">
+            <label for="inputProjectName">Project Name</label>
+            {{input type="text" class="form-control" id="inputProjectName" placeholder="Project name" value=name}}
+        </div>
+        <div class="form-group">
+            <label for="description">Discription:</label>
+            {{textarea value=description  rows="5" id="description" class="form-control"}}
+        </div>
+        <div class="form-group">
+        	<label for="description">Members:</label>
+        	{{select-2
+			    content=listOfmembers
+			    value=selectedMembers
+			    optionLabelPath="name"
+			    multiple=true
+			    placeholder="Choose members"
+			}}
+        </div>
+        <button type="submit" class="btn btn-primary"{{action "save"}}>Save</button>
+    </form>
+</<div>

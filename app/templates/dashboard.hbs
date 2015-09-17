@@ -1,0 +1,7 @@
+<div class="stats">
+          {{#if graphDataPerPeople.length}}
+            {{bar-graph data=graphDataPerPeople yaxisLabel="No of people" appendTo=".stats"}}
+          {{else}}
+            No data found to display graph
+          {{/if}}
+</div>

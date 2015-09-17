@@ -1,0 +1,30 @@
+
+      <!--left-->
+      <div class="col-md-3" id="leftCol">
+        <ul class="nav nav-stacked affix-top" id="sidebar">
+          {{#each member in listOfmembers}}
+                <li class="members-list" draggable="true"><a href="#"  {{bind-attr data-mid="member.id"}}>{{member.name}}</a></li>
+          {{/each}}
+        </ul>
+      </div><!--/left-->
+      
+      <!--right-->
+      <div class="col-md-9">
+        {{#each project in model}}
+          <div class="col-sm-4 project-tile"{{bind-attr data-pid="project.id"}}>
+            <div class="tile purple">
+              <p class="pull-right">
+                {{#link-to 'edit' project}}<i class="glyphicon glyphicon-pencil"></i>{{/link-to}}
+              </p>
+              <h3 class="title">{{project.name}}</h3>
+              <p>{{project.description}}</p>
+              <h4 class="title">Members:</h4>
+              {{#each member in project.members}}
+                <p draggable="true" class="inProjectMembers" {{bind-attr data-mid="member.id" data-pid="project.id"}}>{{member.name}}</p>
+              {{else}}
+                <p>No members added</p>
+              {{/each}}
+            </div>
+          </div>
+        {{/each}}
+      </div><!--/right-->
